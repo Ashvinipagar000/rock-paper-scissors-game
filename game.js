@@ -42,13 +42,27 @@ const playgame =(userchoice) =>{
     else{
         let userwin= true;
         if(userchoice ===paper){//scissor paper
-            userwin = computerchoice ==="scissor" ?false:true;
+            if(userwin = computerchoice ==="scissor"){
+                return false;
+            }else{
+                return true;
+            }
         }
         else if(userchoice==scissor){//rock scissor
-            userwin = computerchoice ==="rock" ?false:true;
+            //userwin = computerchoice ==="rock" ?false:true;
+            if(userwin = computerchoice ==="rock"){
+                return false;
+            }else{
+                return true;
+            }
         }
         else{ //rock paper
-            userwin = computerchoice ==="paper" ?false:true;
+            //userwin = computerchoice ==="paper" ?false:true;
+            if(userwin = computerchoice ==="scissor"){
+                return false;
+            }else{
+                return true;
+            }
         }
         winner(userwin, userchoice,computerchoice);
     }
