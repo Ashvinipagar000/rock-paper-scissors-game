@@ -41,14 +41,14 @@ const playgame =(userchoice) =>{
     }
     else{
         let userwin= true;
-        if(userchoice ===rock){//scissor paper
+        if(userchoice ==="rock"){//scissor paper
             userwin= computerchoice ==="paper" ?false:true;
         }
-        else if(userchoice===paper){//rock scissor
+        else if(userchoice==="paper"){//rock scissor
             userwin= computerchoice ==="scissor" ?false:true;
         }
         else{ //rock paper
-            userwin= computerchoice ==="rock" ?false:true;
+            userwin= computerchoice === "rock" ?false:true;
         }
         winner(userwin, userchoice,computerchoice);
     }
