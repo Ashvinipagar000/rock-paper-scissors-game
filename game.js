@@ -35,20 +35,20 @@ const winner= (userwin,userchoice,computerchoice)=>{
 
 const playgame =(userchoice) =>{
     const computerchoice=gencomputerchoice();
-    if (userchoice=== computerchoice) {
+    if (userchoice === computerchoice) {
         msg.innerText = "game was draw try again!";
         msg.style.backgroundColor="rgb(27, 6, 12)";
     }
     else{
         let userwin= true;
-        if(userchoice ===rock){//scissor paper
-            userwin = computerchoice ==="paper" ?false:true;
-        }
-        else if(userchoice===paper){//rock scissor
+        if(userchoice ===paper){//scissor paper
             userwin = computerchoice ==="scissor" ?false:true;
         }
-        else{ //rock paper
+        else if(userchoice==scissor){//rock scissor
             userwin = computerchoice ==="rock" ?false:true;
+        }
+        else{ //rock paper
+            userwin = computerchoice ==="paper" ?false:true;
         }
         winner(userwin, userchoice,computerchoice);
     }
